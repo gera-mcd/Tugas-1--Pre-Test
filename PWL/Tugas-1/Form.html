@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form NIM dan Nama</title>
+</head>
+<body>
+  <h2>Form Data Mahasiswa</h2>
+  <form id="formData">
+    <label for="nim">NIM:</label>
+    <input type="text" id="nim" name="nim"><br><br>
+    
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama"><br><br>
+    
+    <button type="button" onclick="simpan()">Simpan</button>
+  </form>
+
+  <hr>
+
+  <div id="hasil"></div>
+
+  <script>
+    function simpan() {
+      // Mengambil nilai dari input
+      var nim = document.getElementById("nim").value;
+      var nama = document.getElementById("nama").value;
+      
+      // Menampilkan hasil input di dalam div dengan id "hasil"
+      document.getElementById("hasil").innerHTML = 
+        "<h3>Data yang Disimpan</h3>" +
+        "<p><strong>NIM:</strong> " + nim + "</p>" +
+        "<p><strong>Nama:</strong> " + nama + "</p>";
+    }
+  </script>
+</body>
+</html>
